@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-# Install dependencies
-bundle install --without development test
+# exit on error
+set -o errexit
 
-# Precompile assets for production
+bundle install
 bundle exec rake assets:precompile
-
-# Run database migrations
+bundle exec rake assets:clean
 bundle exec rake db:migrate
