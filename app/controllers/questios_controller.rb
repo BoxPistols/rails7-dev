@@ -1,2 +1,0 @@
-class QuestiosController < ApplicationController
-end
