@@ -1,0 +1,24 @@
+<h2 class="head-2">質問の詳細</h2>
+
+<p>
+  <strong>ID:</strong>
+  <%= @question.id %>
+</p>
+
+<p>
+  <strong>タイトル:</strong>
+  <%= @question.title %>
+</p>
+
+<p>
+  <strong>名前:</strong>
+  <%= @question.name %>
+</p>
+
+<p>
+  <strong>内容:</strong>
+  <%= @question.content %>
+</p>
+
+<%= link_to '編集', edit_question_path(@question) %> |
+<%= link_to '戻る', questions_path %>

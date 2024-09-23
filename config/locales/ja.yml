@@ -1,0 +1,26 @@
+# config/locales/ja.yml
+ja:
+  errors:
+    template:
+      header:
+        one: "%{count}件のエラーによりこの質問は保存できませんでした"
+        other: "%{count}件のエラーによりこの質問は保存できませんでした"
+      body: "以下のエラーを修正してください："
+    format: "%{attribute} %{message}"
+    messages:
+      required: "を入力してください"
+      blank: "を入力してください"
+      too_short: "は%{count}文字以上で入力してください"
+      too_long: "は%{count}文字以内で入力してください"
+      taken: "は既に存在します"
+      invalid: "は無効です"
+
+  activerecord:
+    models:
+      question: "質問"
+
+    attributes:
+      question:
+        title: "タイトル"
+        name: "名前"
+        content: "内容"

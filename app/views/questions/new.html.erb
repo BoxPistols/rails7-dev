@@ -1,0 +1,36 @@
+<h1>New Question</h1>
+<%= form_with model: @question do |form| %>
+
+<% if @question.errors.any? %>
+<div id="error_explanation">
+  <h2><%= t('errors.template.header.other', count: @question.errors.count) %></h2>
+  <p><%= t('errors.template.body') %></p>
+  <ul>
+    <% @question.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+
+
+<div class="field">
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+</div>
+
+<div class="field">
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
+
+<div class="field">
+  <%= form.label :content %>
+  <%= form.text_area :content %>
+</div>
+
+<div class="actions">
+  <%= form.submit %>
+</div>
+<% end %>
