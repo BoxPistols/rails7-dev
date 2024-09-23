@@ -7,6 +7,13 @@ gem "sprockets-rails"
 
 gem "faker"
 
+gem "htmlbeautifier"
+gem "erb_lint", require: false
+gem "rubocop", "~> 1.66", require: false
+
+gem "pry"
+gem "pry-byebug"
+
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", ">= 1.4"
 

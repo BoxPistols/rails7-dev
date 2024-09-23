@@ -1,27 +1,28 @@
 class QuestionsController < ApplicationController
   # Read all records
   def index
-    # @questions = Question.all
+    @questions = Question.all
   end
 
   # Read a specific record
   def show
-    # @question = Question.find(params[:id])
+      # p params[:id]
+      @question = Question.find(params[:id])
   end
 
   # Form for creating a new record
   def new
-    # @question = Question.new
+    @question = Question.new
   end
 
   # Create a new record
   def create
+    # モデル初期化
     @question = Question.new(question_params)
-    if @question.save
-      redirect_to @question
-    else
-      render :new
-    end
+    # DB保存
+    @question.save
+    # リダイレクト
+    redirect_to @question
   end
 
   # Form for editing an existing record
@@ -50,6 +51,6 @@ class QuestionsController < ApplicationController
 
   # Strong parameters
   def question_params
-    params.require(:question).permit(:title, :body)
+    params.require(:question).permit(:title, :name, :content)
   end
 end
