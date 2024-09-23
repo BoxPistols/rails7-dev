@@ -6,10 +6,12 @@ gem "rails", "~> 7.2.1"
 gem "sprockets-rails"
 
 gem "faker"
+gem "htmlbeautifier"
+gem "erb_lint", require: false
+gem "rubocop", "~> 1.66", require: false
 
-
-# Use sqlite3 as the database for Active Record
-# gem "sqlite3", ">= 1.4"
+gem "pry"
+gem "pry-byebug"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -56,13 +58,6 @@ group :development do
 
   # Use sqlite3 as the database for Active Record
   gem "sqlite3", ">= 1.4"
-
-  gem "htmlbeautifier"
-  gem "erb_lint", require: false
-  gem "rubocop", "~> 1.66", require: false
-
-  gem "pry"
-  gem "pry-byebug"
 end
 
 group :test do

@@ -1,17 +1,17 @@
 <h1>Questions</h1>
 
 <% @questions.each do |question| %>
-  <div>
-    <h2>
-      <%= question.title %>
-    </h2>
-    <p>
-      <%= question.name %>
-    </p>
-    <p>
-      <%= question.content %>
-    </p>
-  </div>
-  <% end %>
+<div>
+  <h2>
+    <%= question.title %>
+  </h2>
+  <p>
+    <%= question.name %>
+  </p>
+  <p>
+    <%= question.content %>
+  </p>
+</div>
+<% end %>
 
 <%= link_to 'New Question' , new_question_path %>
