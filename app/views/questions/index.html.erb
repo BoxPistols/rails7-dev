@@ -1,17 +1,41 @@
 <h1>Questions</h1>
 
-<% @questions.each do |question| %>
-<div>
-  <h2>
-    <%= question.title %>
-  </h2>
-  <p>
-    <%= question.name %>
-  </p>
-  <p>
-    <%= question.content %>
-  </p>
-</div>
-<% end %>
+<table>
+  <tr>
+    <th>
+      ID
+    </th>
+    <th>
+      Title
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      Content
+    </th>
+    <th></th>
+  </tr>
+  <% @questions.each do |question| %>
+  <tr>
+    <td>
+      <%= question.id %>
+    </td>
+    <td>
+      <%= question.title %>
+    </td>
+    <td>
+      <%= question.name %>
+    </td>
+    <td>
+      <%= question.content %>
+    </td>
+    <td>
+      <%= link_to 'Edit', edit_question_path(question) %> |
+      <%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+  <% end %>
+</table>
 
 <%= link_to 'New Question' , new_question_path %>
