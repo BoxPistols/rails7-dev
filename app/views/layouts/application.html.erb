@@ -43,8 +43,14 @@
       bottom: 0;
       width: 100%;
     }
+
+    [class^="head-"] {
+      font-size: 1.5em;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
   </style>
-    <%= hotwire_livereload_tags if Rails.env.development? %>
+  <%= hotwire_livereload_tags if Rails.env.development? %>
 
 
 </head>
@@ -53,7 +59,7 @@
   <!-- グローバルなヘッダー -->
   <header>
     <a href="./">
-      <h1 class="head-1 design-font-en">My Application</h1>
+      <h1 class="head-1 design-font-en">The Questions</h1>
     </a>
   </header>
 

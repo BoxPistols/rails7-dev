@@ -20,9 +20,11 @@ class QuestionsController < ApplicationController
     # モデル初期化
     @question = Question.new(question_params)
     # DB保存
-    @question.save
-    # リダイレクト
-    redirect_to @question
+    if @question.save
+      redirect_to @question
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   # Form for editing an existing record
