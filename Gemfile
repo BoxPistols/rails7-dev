@@ -71,5 +71,5 @@ end
 
 # render.com
 group :production do
-  gem "pg", "~> 1.3"
+  gem "pg", "~> 1.5"
 end
