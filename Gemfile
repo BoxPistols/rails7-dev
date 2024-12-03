@@ -57,7 +57,7 @@ group :development do
 
   gem "htmlbeautifier"
   gem "erb_lint", require: false
-  gem "rubocop", "~> 1.66", require: false
+  gem "rubocop", "~> 1.69", require: false
   gem "hotwire-livereload"
   gem "pry"
   gem "pry-byebug"
